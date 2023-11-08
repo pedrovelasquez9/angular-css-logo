@@ -1,0 +1,87 @@
+body {
+  background-color: rgb(17 15 15);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+footer {
+  color: #fff;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+a {
+  font-weight: bold;
+  color: #fff;
+}
+
+.container {
+  width: 300px;
+  height: auto;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-template-areas:
+    "topLeft . topRight"
+    "topLeft center topRight"
+    ". bottom .";
+  justify-items: center;
+}
+
+.top-left,
+.top-right {
+  height: 200px;
+}
+
+.top-left {
+  grid-area: topLeft;
+  width: 0px;
+  height: 0px;
+  border-top: 45px solid transparent;
+  border-right: 80px solid #8106fa;
+  border-bottom: 160px solid transparent;
+  transform: skew(-25deg, 0deg);
+}
+
+.top-right {
+  grid-area: topRight;
+  width: 0px;
+  height: 0px;
+  border-top: 45px solid transparent;
+  border-left: 80px solid #8106fa;
+  border-bottom: 160px solid transparent;
+  transform: skew(25deg, 0deg);
+}
+
+.center {
+  grid-area: center;
+  width: 0px;
+  height: 0px;
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  border-bottom: 80px solid #8106fa;
+}
+
+.bottom {
+  grid-area: bottom;
+  width: 100px;
+  height: 0px;
+  border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-bottom: 30px solid #8106fa;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-top {
+  border-top: 35px solid #8106fa;
+  border-right: 70px solid transparent;
+  border-left: 70px solid transparent;
+  transform: translateY(30px);
+}
